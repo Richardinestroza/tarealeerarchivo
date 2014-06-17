@@ -48,32 +48,75 @@ public class Ejercicios {
 	{
 		try
 		{
-			File r2_archivo = new File(path);
-			Scanner r2 = new Scanner(r2_archivo);
-			return r2.nextInt();
-		}catch(Exception e)
+			File file = new File(path);
+			Scanner r = new Scanner(file);
+			int x = 0;
+			while (r.hasNext())
+			{
+				x=r.nextInt();
+			}
+			return x;
+		}catch (Exception e)
 		{
 			e.printStackTrace();
 		}
 		return -1;
+
 	}
 	
 	//Suma todos los numeros del archivo
 	static int sumarNumerosDeArchivo(String path)
 	{
+		try
+		{
+			File file = new File(path);
+			Scanner r = new Scanner(file);
+			int x = 0;
+			while (r.hasNext())
+			{
+				x+=r.nextInt();
+			}
+			return x;
+		}catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 		return -1;
+
+
 	}
+
 	
 	//Devuelve true si encuentra un numero en un archivo, de lo contrario devuelve false
 	static boolean existeEnArchivo(String path,int num)
 	{		
-		return false;
-	}
+		try
+		{
+	Scanner scanner = new Scanner(path);
+	boolean b = scanner.nextBoolean();
+	return b;
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return true;
+}
 	
 	//Devuelve el numero menor de un archivo
 	static int getMenorDeArchivo(String path)
 	{
+		try
+		{
+		File file = new File(path);
+		Scanner r = new Scanner(file);
+
+		return r.nextInt();
+		}catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 		return -1;
+
 	}
 	
 	//Devuelve el numero mayor de un archivo
